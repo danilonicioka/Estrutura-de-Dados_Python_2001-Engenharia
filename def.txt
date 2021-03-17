@@ -1,0 +1,2 @@
+Estrutura de Dados:
+ Modo particular de armazenamento e organização de dados em um computador para que possam ser utilizados de maneira eficiente(acessar, alterar e excluir dados)

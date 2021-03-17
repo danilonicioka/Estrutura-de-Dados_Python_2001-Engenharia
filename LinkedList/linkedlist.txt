@@ -1,0 +1,16 @@
+Array
+São organizadas linearmente na memória(sucessivos). 
+O acesso aos dados pelo índice é bem rápido, mas a exclusão de um elemento se torna bem demorado, pois necessitará copiar os outros elementos para reorganizar na memória. 
+Devido a isso, foram criadas as linked lists
+
+Singly Linked List
+Não são organizadas linearmente como um array, mas são organizadas por nós(nodes) com pointer(ponteiro) que vai apontar para o próximo elemento da lista.
+O último elemento da lista aponta para "null", o que permite indentificar onde está o final da lista.
+Isso permite uma exclusão mais rápida de elementos da lista.
+
+
+Doubly Linked List
+A diferença é que cada nó sabe o anterior e o próximo nó. Isso possibilita a busca mais rápida por elementos e a exclusão mt mais rápida do último elemento da lista.
+
+
+Apesar do aumento no tempo de busca de elementos nas linked lists em comparação com as array, a velocidade da exclusão de elementos compensa bastante.

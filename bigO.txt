@@ -1,0 +1,2 @@
+Big O Nonation:
+ Modo de classificar o algoritmo pelo seu tempo de execução ou espaço ocupado conforme o nosso input aumenta, ou seja, analisa-se o tempo que demora para o algoritmo "funcionar" conforme aumenta os dados recebidos
