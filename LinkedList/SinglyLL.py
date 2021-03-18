@@ -1,12 +1,12 @@
 # Node - função classe nó -> construtor
 class Node:
 
-    def _init_(self, data): #os argumentos serão o dado da lista e o ponteiro
+    def __init__(self, data): #os argumentos serão o dado da lista e o ponteiro
         self.data = data #dado
         self.next = None #referência, mas no primeiro caso coloca vazio. A função None no python representa Vazio
 
 class LinkedList:
-    def _init_(self):
+    def __init__(self):
         self.head = None #cabeça da lista
 
     def append(self, data): #função para adicionar elementos na lista
@@ -15,13 +15,13 @@ class LinkedList:
             self.head = new_node #se estiver vazia o novo nó será adicionado na cabeça da lista
             return
 
-            current_node = self.head
+        current_node = self.head
 
-            while current_node.next: #percorrer toda a estrutura, a condição só se tornará falsa quando chegar no final da lista
-                current_node = current_node.next #passa cada nó atual para o próximo
+        while current_node.next: #percorrer toda a estrutura, a condição só se tornará falsa quando chegar no final da lista
+            current_node = current_node.next #passa cada nó atual para o próximo
 
-            current_node.next = new_node #ao chegar no final(saiu do while), define-se o nó atual como o novo
-            return
+        current_node.next = new_node #ao chegar no final(saiu do while), define-se o nó atual como o novo
+        return
 
     def length(self): #para achar o tamanho da lista
         if self.head == None:
@@ -71,8 +71,8 @@ my_list = LinkedList()
 my_list.display()
 
 my_list.append(3)
-my_list.append(7)
 my_list.append(2)
+my_list.append(7)
 my_list.append(1)
 
 my_list.display()
