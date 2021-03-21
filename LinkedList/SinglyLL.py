@@ -55,6 +55,19 @@ class LinkedList:
             contents = contents.next #passa para o próximo nó
         print("------------") #print apenas para separar
 
+    #Retorna o valor do nó do índice que for informado
+    def get(self, index):
+        if index >= self.length() or index < 0:
+            print("Error: Index out of range")
+            return None
+        current_idx = 0 #começa a busca pelo índice 0 no head
+        current_node = self.head
+        while current_node != None: #percorre a lista procurando o índice
+            if current_idx == index:
+                return current_node.data
+            current_node = current_node.next #anda na lista
+            current_idx += 1
+
     def reverse_liskedlist(self): #função para reverter a linked list
         previous_node = None #estamos no primeiro elemento e não há nada antes, logo é vazio
         current_node = self.head
@@ -66,6 +79,27 @@ class LinkedList:
             current_node = next #passa para o próximo node anterior para continuar invertendo
         self.head = previous_node
 
+    #Implementar função que busca um item e retorna se existe ou não
+    #def search_item(data):
+
+    #Implementar função que remove o primeiro item da lista
+    #def remove_at_start()
+
+    #Implementar função que remove o último item da lista
+    #def remove_at_end()
+
+    #Implementar função que insere um item no começo
+    #def insert_at_start()
+
+    #Implementar função que insere um item no começo
+    #def insert_at_end()
+
+    #Implementar função que remove o elemento pelo valor
+    #def remove_element_by_value(value)
+
+    #Implementar função que insere um item no index especificado
+    #def insert_at_index(index, data)
+
 #Test
 my_list = LinkedList()
 my_list.display()
@@ -75,4 +109,31 @@ my_list.append(2)
 my_list.append(7)
 my_list.append(1)
 
+my_list.display()
+
+print("The total number of elements are: "+str(my_list.length())) #str transforma em string
+print(my_list.to_list())
+
+my_list.reverse_liskedlist()
+my_list.display()
+
+#my_list.search_item(7)
+#my_list.search_item(77)
+
+#my_list.remove_at_start()
+my_list.display()
+
+#my_list.remove_at_end()
+my_list.display()
+
+#my_list.insert_at_start(1)
+my_list.display()
+
+#my_list.insert_at_end(3)
+my_list.display()
+
+#my_list.remove_element_by_value(3)
+my_list.display()
+
+#my_list.insert_at_index(2, 88)
 my_list.display()
